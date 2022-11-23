@@ -1,4 +1,5 @@
-# [Team Dream Search Engine](https://searchenginecapstone.herokuapp.com/)
+# Team Dream Search Engine
+Follow [this link](https://searchenginecapstone.herokuapp.com/) to test out the search engine
 
 # How To Run
 Install virtualenv:
