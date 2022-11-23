@@ -3,7 +3,7 @@ Follow [this link](https://searchenginecapstone.herokuapp.com/) to test out the 
 
 
 # Project Overview
-This project offers users a Flask-leveraged web-based search engine to search for Wikipedia articles relating to the topic of health. The search engine queries our data set, which is an inverted index built from a corpus of ~500 Wikipedia articles. The documents are returned based on relevance to the query using the Okapi BM25 algorithm. Additionally, text summaries of each article are included in the search results as well as pagination for convenient browsing through results.
+This project offers users a Flask-leveraged web-based search engine to search for Wikipedia articles relating to the topic of health. The search engine queries our data set, which is an inverted index built from a corpus of ~500 Wikipedia articles. The documents are returned based on relevance to the query using the Okapi BM25 algorithm. Additionally, text summaries of each article are included in the search results as well as pagination for user-friendly browsing.
 
 # Python Scripts
 We leveraged several Python scripts to execute multiple different functions necessary for the search engine to run. First, the `focused_crawler.py` sources Wikipedia articles based on a seed URL and keyword. For our seed URL, we used the [Wikipedia Article for Health](https://en.wikipedia.org/wiki/Health), and the keyword we used was "health." Next, we set the depth parameter to 10 so that the crawler would go 10 levels deep in Wikipedia space by adding links to articles within the articles that contained the word "health," through 10 iterations of crawling.
