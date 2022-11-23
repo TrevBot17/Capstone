@@ -1,6 +1,6 @@
 # Team Dream Search Engine
 Follow [this link](https://searchenginecapstone.herokuapp.com/) to test out the search engine.
-
+test
 
 # Project Overview
 This project offers users a Flask-leveraged web-based search engine to search for Wikipedia articles relating to the topic of health. The search engine queries our data set, which is an inverted index built from a corpus of ~500 Wikipedia articles. The documents are returned based on relevance to the query using the Okapi BM25 algorithm. Additionally, text summaries of each article are included in the search results as well as pagination for user-friendly browsing.
