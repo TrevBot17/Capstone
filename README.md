@@ -15,5 +15,5 @@ The other key Python scripts include:
 
 **app.py**: Employs Flask library to generate search engine webpage, takes in user query and runs it through the Search Engine Python script, and contains important logic for appending the correct text summarizies to each URL result, as well as pagination information for use in the index.html file. Each result page should only contain 10 results, and the user should be able to proceed through pages individually until they reach the termination of the search results.
 
-#HTML and CSS Files
+# HTML and CSS Files
 The **index.html** and **base.html** files provide the back-end structure of the search engine webpage. The **index.html** file contains Jinja2 scripting to incorporate logic into the web page's layout dependent on certain conditions. For example, if a user reaches the last page of a certain query's results, they should not be able to click on the next page button since there wouldn't be a next page. Another instance of Jinja2 logic is modifying what is shown on the home page compared to post-search. The user does not need to see an empty section labeled with "No Search Results" on the homepage before they have even executed a query. The **base.html** file contains HTML code for visual aspects like font color and so forth.
