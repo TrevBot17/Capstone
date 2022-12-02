@@ -30,7 +30,7 @@ def OkapiBM25(inverted_index, queries, max_docs=-1, k1=1.2, b=0.75, k3=1000):
     """
     Retrieve webpages in order of relevance from an inverted index based on a query. The function looks only 
     at terms of the query which are present in the inverted index. The ranking is based on the retrieval function 
-    S(D, Q)=sum(((k1+1)*c_wD)/(k1*(1-b+b*(|D|/avg_dl)+c_wD)) * ln((N-df(w)+0.5)/(df(w)+0.5) * ((k3+1)*c_wQ)/(k3+c_wQ)). 
+    S(D, Q)=sum(((k1+1)*c_wD)/(k1*(1-b+b*(|D|/avg_dl))+c_wD) * ln((N-df(w)+0.5)/(df(w)+0.5) * ((k3+1)*c_wQ)/(k3+c_wQ)). 
     
     - input: inverted index, query, max_docs (max number of docs to be retrieved), and parameters k1, b, k3
     - returns the webpages in descending order of relevance
@@ -70,7 +70,7 @@ def OkapiBM25(inverted_index, queries, max_docs=-1, k1=1.2, b=0.75, k3=1000):
                 for doc in inverted_index[token]:
                     # TF=((k1+1)*c_wD)/(k1*(1-b+b*(|D|/avg_dl)+c_wD))
                     c_wD = inverted_index[token][doc][0]
-                    tf = ((k1 + 1) * c_wD) / (k1 * (1 - b + b * (doc_dict[doc]/avg_dl) + c_wD))
+                    tf = ((k1 + 1) * c_wD) / (k1 * (1 - b + b * (doc_dict[doc]/avg_dl)) + c_wD)
                     # normalized query term frequency: qtf=((k3+1)*c_wQ)/(k3+c_wQ)
                     qtf = ((k3 + 1) * c_wQ) / (k3 + c_wQ)
                     score = tf * idf * qtf
