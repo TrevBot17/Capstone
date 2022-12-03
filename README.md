@@ -37,6 +37,7 @@ Before you can run the fully functional webpage, you'll need to use some of the 
 2. Run the `duplicate_removal.py` file to remove articles that are either identical or different URLs that redirect to the same or nearly identical articles. 
 3. Run the `inv_index.py` file to build the inverted index from your previously generated corpus. Again, make sure that the `working_dir` variable is set to your current directory. This file should output the inverted index of the corpus as a pickle file to your working directory. You should also run the `text_summaries.py` file to create another pickle file in your working directory containing the text summaries associated with each URL in the corpus. 
 4. Run `app.py` to build our search engine webpage running on your local machine.
+5. Add details about `evaluation` and prec-rec python functions
 
 
 Once these steps are complete, you can run the project from your terminal:
