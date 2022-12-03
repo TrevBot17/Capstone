@@ -43,8 +43,12 @@
                                 {% if search_results_list|length > 0 %}
 
                                 {% for r in search_results_list %}
-                                <div class="font-13 text-success mb-3"><a href='{{r[0]}}' target="_blank">{{r[0]}}</a></div>
-                                <div class="font-13 text-success mb-3"><p target="_blank">{{r[1]}}</p></div>
+                                <div>
+                                    <a href='{{r[0]}}' target="_blank"><font size="5">{{r[1]}}</font>
+                                    <br> <font size="2" style="color:#121313;">{{r[0]}}</font>
+                                    </a>
+                                </div>
+                                <div class="font-13 text-success mb-3"><p>{{r[2]}}</p></div>
   
                                 {% endfor %}
                                 {% else %}
