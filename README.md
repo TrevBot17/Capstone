@@ -33,7 +33,7 @@ To make all these scripts work together, we first ran locally the `inv_index.py`
 
 # How To Run
 Before you can run the fully functional webpage, you'll need to use some of the Python scripts to generate the corpus and text summaries. This way, this long process will only have to be completed once, rather than each time you want to execute a search. To accomplish this, you'll need to:
-1. Run the `focused_crawler.py` file to generate the corpus. Within this file, you can play around with the parameters like `keyword` and `depth` to modify the content of the corpus. Make sure to write this file to the same directory with the other Python scripts. 
+1. Run the `focused_crawler.py` file to generate the corpus. Within this file, you can play around with the parameters like `keyword` and `depth` to modify the content of the corpus. Make sure to write this file to the same directory with the other Python scripts. This script will creates the `Logs` and `Raw_TXT_Downloads` foldres that will need to be referenced in future scripts.
 2. Run the `duplicate_removal.py` file to remove articles that are either identical or different URLs that redirect to the same or nearly identical articles. 
 3. Run the `inv_index.py` file to build the inverted index from your previously generated corpus. Again, make sure that the `working_dir` variable is set to your current directory. This file should output the inverted index of the corpus as a pickle file to your working directory. You should also run the `text_summaries.py` file to create another pickle file in your working directory containing the text summaries associated with each URL in the corpus. 
 4. Run `app.py` to build our search engine webpage running on your local machine.
