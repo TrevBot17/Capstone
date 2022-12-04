@@ -2,6 +2,7 @@
 Follow [this link](https://searchenginecapstone.herokuapp.com/) to test out the search engine.
 
 # Data Flow Architecture Diagram
+## add piece about duplicate removal
 ![](https://i.ibb.co/Lpf4bCG/Capstone-Architecture-Diagram-1.jpg?raw=True)
 
 # Project Overview
