@@ -93,8 +93,10 @@ def spider(seed_url, keyword, crawl_depth):
     # Clean text
     text = re.sub(r'\[.*?\]+', '', text)
     text = text.replace('\n', '')
+    # get title of the wikipedia article
+    page_title = soup.find_all('title')[0].text[:-12]
     file = open(working_dir + "Raw_TXT_Downloads/"+(str(crawled_count))+") "+name+".txt","w", encoding='utf-8')
-    file.write(seed_url + '\n' + text)
+    file.write(seed_url + '\n' + page_title + '\n' + text)
     file.close()
 
     # assuming maximum depth to crawl as Depth 3
@@ -155,8 +157,10 @@ def spider(seed_url, keyword, crawl_depth):
                                             # Clean text
                                             text = re.sub(r'\[.*?\]+', '', text)
                                             text = text.replace('\n', '')
+                                            # get title of the wikipedia article
+                                            page_title = soup.find_all('title')[0].text[:-12]
                                             file = open(working_dir + "Raw_TXT_Downloads/"+(str(crawled_count+1))+") "+name+".txt","w", encoding='utf-8')
-                                            file.write(url + '\n' + text)
+                                            file.write(url + '\n' + page_title + '\n' + text)
                                             file.close()
                                             
                                             extracted_urls.append(url)
@@ -190,8 +194,10 @@ def spider(seed_url, keyword, crawl_depth):
                                             # Clean text
                                             text = re.sub(r'\[.*?\]+', '', text)
                                             text = text.replace('\n', '')
+                                            # get title of the wikipedia article
+                                            page_title = soup.find_all('title')[0].text[:-12]
                                             file = open(working_dir + "Raw_TXT_Downloads/"+(str(crawled_count+1))+") "+name+".txt","w", encoding='utf-8')
-                                            file.write(url + '\n' + text)
+                                            file.write(url + '\n' + page_title + '\n' + text)
                                             file.close()
 
                                             extracted_urls.append(url)
