@@ -44,5 +44,5 @@ def index(page):
                                           total = len(newRes))
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
     
