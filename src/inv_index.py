@@ -7,7 +7,7 @@ import nltk
 from nltk import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
-
+nltk.download('stopwords')
 from collections import defaultdict
 from collections import Counter
 from string import punctuation
@@ -23,8 +23,6 @@ punctuation = list(punctuation)
 # add quote sign "``" and "''"
 punctuation.extend(["``","''"])
 
-from google.colab import drive
-drive.mount('/content/drive')
 
 # function to convert a webpage in txt format into a sequence of stemmed tokens, stored as list in a dictionary
 
@@ -47,35 +45,21 @@ def load_wikipages(directory):
         # checking if it is a file
         if os.path.isfile(f):
             with open(f, 'r', encoding='utf-8') as d:
-              url = d.readline().strip()
-              doc = d.read()
+                url = d.readline().strip()
+                title = d.readline().strip()
+                doc = d.read()
+               
             word_tokens = nltk.word_tokenize(doc)
             tokens_swremoved = [w for w in word_tokens if w.lower() not in stop_words]
             tokens_stemmed = [stemmer.stem(w) for w in tokens_swremoved]
             tokens_puncremoved = [token for token in tokens_stemmed if token not in punctuation]
-            docs[(f'd{doc_id}',url)] = tokens_puncremoved   
+            docs[(f'd{doc_id}',url, title)] = tokens_puncremoved   
             doc_id += 1
     
     return docs
             
-directory = "/content/drive/MyDrive/SIADS 699/Raw_TXT_Downloads"
+directory = "C:/Users/JWeinstein/Capstone-main/src/Raw_TXT_Downloads/"
 docs = load_wikipages(directory)
-
-len(docs)
-
-# function to transform a given query into a list of tokenized+stemmed words
-
-def query_prep(query):
-    """converts a given query into a list of tokenized and stemmed words"""
-
-    stop_words = set(stopwords.words("english"))
-    stemmer = PorterStemmer()
-    
-    word_tokens = nltk.word_tokenize(query)
-    tokens_swremoved = [w for w in word_tokens if w.lower() not in stop_words]
-    tokens_stemmed = [stemmer.stem(w) for w in tokens_swremoved]
-    tokens_puncremoved = [token for token in tokens_stemmed if token not in punctuation]
-    return tokens_puncremoved
 
 # function to build the inverted index
 
@@ -113,5 +97,5 @@ len(inv_index)
 import pickle
 
 # save dictionary to pickle file
-with open('/content/drive/MyDrive/SIADS 699/Heroku/inv_index.pickle', 'wb') as file:
-  pickle.dump(inv_index, file, protocol=pickle.HIGHEST_PROTOCOL)
+with open('C:/Users/JWeinstein/Capstone-main/src/inv_index.pickle', 'wb') as file:
+    pickle.dump(inv_index, file, protocol=pickle.HIGHEST_PROTOCOL)
