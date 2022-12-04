@@ -25,7 +25,7 @@ def index(page):
     myDict = pickle.load(open('text_summaries.pickle','rb'))
     
     for r in ranking:
-        newRes.append((r[1], myDict[r[1]]))
+        newRes.append((r[1], r[2], myDict[r[1]]))
 
     start = 0+(page*10)
     end = start + 10
