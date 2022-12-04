@@ -1,22 +1,8 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[7]:
-
-
 import os
 import nltk
 import time
 
-
-# In[8]:
-
-
 working_dir = 'C:/Users/JWeinstein/Capstone-main/src/'
-
-
-# In[9]:
-
 
 def jaccard_similarity(list_x, list_y):
     'get jaccard similartiy of two documents'
@@ -37,10 +23,6 @@ def shingling_jaccard_similarity(text_x, text_y, n):
     sim_score=jaccard_similarity(x_ngrams,y_ngrams)
     
     return sim_score
-
-
-# In[10]:
-
 
 # code adapted from https://dida.do/blog/how-to-identify-duplicate-files-with-python
 
@@ -77,14 +59,12 @@ for file_name in files:
         
         # call function shingling_jaccard_similarity, with trigrams (n=3)
         shing_jaccard = shingling_jaccard_similarity(text, class_text, 3)
-#         print(shing_jaccard)
         
         if shing_jaccard > 0.95:
             is_duplicate = True
         else:
             is_duplicate = False
 
-#         print(is_duplicate)
         if is_duplicate:
             class_.append(file_name)            
             break
@@ -92,30 +72,8 @@ for file_name in files:
     if not is_duplicate:
         duplicates.append([file_name])     
 
-# end time
-endTime = time.time() - startTime
-
-# show results: documents being together in one (inner) list are duplicates
-(duplicates)
-
-
-# In[11]:
-
-
-endTime # in seconds
-
-
-# In[18]:
-
 
 # remove the duplicates from directory: only keep the first document within the inner lists 
 for class_ in duplicates:
     for file in class_[1:]:
         os.remove(os.path.join(directory, file))
-
-
-# In[ ]:
-
-
-
-
