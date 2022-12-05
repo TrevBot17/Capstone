@@ -1,5 +1,6 @@
 # Team Dream Search Engine
 Follow [this link](https://searchenginecapstone.herokuapp.com/) to beta test the search engine for yourself.
+**DISCLAIMER: The information on this site is not intended or implied to be a substitute for professional medical advice, diagnosis or treatment. Always seek the advice of your physician or other qualified health care provider with any questions you may have regarding a medical condition or treatment and before undertaking a new health care regimen, and never disregard professional medical advice or delay in seeking it because of something you have read on this website.**
 
 # Data Flow Architecture Diagram
 
