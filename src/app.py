@@ -1,7 +1,5 @@
 from math import ceil
 from flask import Flask, render_template, request
-from flask_paginate import Pagination, get_page_args
-#from flask_sqlalchemy import Pagination
 from search_engine import query_prep, OkapiBM25
 import pickle
 
