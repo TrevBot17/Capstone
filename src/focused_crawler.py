@@ -1,4 +1,4 @@
-working_dir = 'C:/Users/JWeinstein/Capstone-main/src'
+working_dir = '[your working directory]/src'
 
 import requests
 from bs4 import BeautifulSoup
@@ -223,6 +223,6 @@ def spider(seed_url, keyword, crawl_depth):
     focused_crawler_log.close()
 
 seed_url = 'https://en.wikipedia.org/wiki/Health'
-crawl_depth = 3
+crawl_depth = 10
 keyword = 'health'
 spider(seed_url, keyword, crawl_depth)
