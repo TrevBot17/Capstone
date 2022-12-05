@@ -14,3 +14,4 @@ regex==2022.10.31
 SQLAlchemy==1.4.43
 tqdm==4.64.1
 Werkzeug==2.2.2
+pandas==1.4.2
