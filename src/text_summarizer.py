@@ -59,10 +59,8 @@ for filename in sorted(os.listdir(directory), key=lambda x: int(x.split(')')[0])
 import pickle
 
 # save dict_summarizer to pickle file
-with open('C:/Users/JWeinstein/Capstone-main/src/text_summaries.pickle', 'wb') as file:
+with open('[your working directory]/src/text_summaries.pickle', 'wb') as file:
     pickle.dump(dict_summarizer, file, protocol=pickle.HIGHEST_PROTOCOL)
 
-with open("C:/Users/JWeinstein/Capstone-main/src/text_summaries.pickle", "rb") as file:
+with open("[yor working directory]/src/text_summaries.pickle", "rb") as file:
     text_sum = pickle.load(file)
-
-text_sum
