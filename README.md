@@ -46,8 +46,8 @@ Before you can run the fully functional webpage, you'll need to use some of the 
 ## App
 
 
-5. Run `app.ipynb` to build the search engine webpage running on your local machine. This Notebook interacts with the `search_engine.py` script, so make sure to have that script in the same directory.
+Run `app.ipynb` to build the search engine webpage running on your local machine. This Notebook interacts with the `search_engine.py` script, so make sure to have that script in the same directory.
 
 ## Evaluation
 
-6. Add details about `evaluation` and prec-rec python functions
+Add details about `evaluation` and prec-rec python functions
