@@ -46,36 +46,8 @@ Before you can run the fully functional webpage, you'll need to use some of the 
 ## App
 
 
-5. Run `app.ipynb` to build the search engine webpage running on your local machine. This Notebook interacts with the `search_engine.py` script.
+5. Run `app.ipynb` to build the search engine webpage running on your local machine. This Notebook interacts with the `search_engine.py` script, so make sure to have that script in the same directory.
+
+## Evaluation
+
 6. Add details about `evaluation` and prec-rec python functions
-
-
-<!-- Once these steps are complete, you can run the project from your terminal:
-
-
-Install virtualenv:
-
-`$ pip install virtualenv`
-
-Open a terminal in the project root directory and run:
-
-`$ virtualenv env`
-
-Then run the command:
-
-`$ .\env\Scripts\activate`
-
-Then install the dependencies:
-
-`$ (env) pip install -r requirements.txt`
-
-Finally start the web server:
-
-`$ (env) python app.py`
-
-This server will start on port 5000 by default. You can change this in app.py by changing the following line to this:
-
-```
-if __name__ == "__main__":
-    app.run(debug=True, port=<desired port>)
-``` -->
