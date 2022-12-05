@@ -1,5 +1,5 @@
 # Team Dream Search Engine
-Follow [this link](https://searchenginecapstone.herokuapp.com/) to test out the search engine.
+Follow [this link](https://searchenginecapstone.herokuapp.com/) to beta test the search engine for yourself.
 
 # Data Flow Architecture Diagram
 
