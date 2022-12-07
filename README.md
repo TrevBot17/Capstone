@@ -39,14 +39,14 @@ Before you can run the fully functional webpage, you'll need to use some of the 
 ## Pre-processing
 
 
-1. Run the `focused_crawler.ipynb` Notebook to generate the corpus. Within this file, you can play around with the parameters like `keyword` and `depth` to modify the content of the corpus. Make sure to write this file to the same directory with the other Python scripts. This script will creates the  `Raw_TXT_Downloads` folder that will need to be referenced in future scripts.
+1. Run the `focused_crawler.ipynb` Notebook to generate the corpus. Within this file, you can play around with the parameters like `keyword` and `depth` to modify the content of the corpus. Make sure to write this file to the same directory with the other Python scripts. This script will creates the `Raw_TXT_Downloads` folder that will need to be referenced in future scripts.
 2. Run  `duplicate_removal.ipynb` file to remove articles that are either identical or different URLs that redirect to the same or nearly identical articles. 
-3. Run the `inv_index.ipynb` Notebook to build the inverted index from your previously generated corpus. Again, make sure that the `working_dir` variable is set to your current directory. This file should output the inverted index of the corpus as a pickle file to your working directory. You should also run `text_summaries.ipynb`  to create another pickle file in your working directory containing the text summaries associated with each URL in the corpus. 
+3. Run the `inv_index.ipynb` Notebook to build the inverted index from your previously generated corpus. Again, make sure that the `working_dir` variable is set to `{your working directory}/Pre-Processing/inv_index.pickle`. This file should output the inverted index of the corpus as a pickle file to your working directory. You should also run `text_summaries.ipynb`  to create another pickle file in your working directory containing the text summaries associated with each URL in the corpus. 
 
 ## App
 
 
-Run `app.ipynb` to build the search engine webpage running on your local machine. This Notebook interacts with the `search_engine.py` script, so make sure to have that script in the same directory.
+Run `app.py` (or `app.ipynb`) to build the search engine webpage running on your local machine. This Notebook interacts with the `search_engine.py` script, so make sure to have that script in the same directory.
 
 ## Evaluation
 
