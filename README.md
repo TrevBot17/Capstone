@@ -44,7 +44,8 @@ To make all these scripts work together, we first ran locally the `focused_crawl
 
 
 # How To Run
-Before you can run the fully functional webpage, you'll need to use some of the Python scripts to generate the corpus and text summaries. This way, this long process will only have to be completed once, rather than each time you want to execute a search. To accomplish this, you'll need to take note of the directory in which you'll be running these notebooks and modify all variables called `working_dir` in each notebook to the correct locations so that reading and writing of files/folders performs correctly. Also, make sure to have a folder named `templates` with `index.html` and `base.html`.
+The first thing you need to do is to download a copy of this project (`git clone https://github.com/TrevBot17/Capstone.git`).
+Before you can run the fully functional webpage, you'll need to use some of the Jupyter Notebooks to generate the corpus, the inverted index and text summaries. This way, this long process will only have to be completed once, rather than each time you want to execute a search. To accomplish this, you'll need to take note of the directory in which you'll be running the notebooks `inv_index.ipynb` and `text_summarizer.ipynb` and modify the variable called `working_dir` to the correct location so that writing of the pickle files to the `app` folder performs correctly. Also, make sure to have a folder named `templates` with `index.html` and `base.html`.
 ## Pre-processing
 
 
