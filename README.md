@@ -34,7 +34,7 @@ The other key notebooks include:
 `Evaluation.ipynb`: Evaluates our search engine with a given ground truth sheet.
 
 
-`WordCloud.ipynb`: Creates a word cloud from all documents in our corpus (Note that you must have downloaded the full corpus to create the word cloud. [Refer to below section Pre-Processing](#pre-processing)).
+`WordCloud.ipynb`: Creates a word cloud from all documents in our corpus. Note that you must have downloaded the full corpus to create the word cloud. [Refer to below section Pre-Processing](#pre-processing).
 
 # HTML Base and Index Files
 The `index.html` and `base.html` files provide the back-end structure of the search engine webpage. The `index.html` file contains [Jinja2](https://jinja.palletsprojects.com/en/3.1.x/) scripting to incorporate logic into the web page's layout dependent on certain conditions. For example, if a user reaches the last page of a certain query's results, they should not be able to click on the next page button since there wouldn't be a next page. Another instance of Jinja2 logic is modifying what is shown on the home page compared to post-search. The user does not need to see an empty section labeled with "No Search Results" on the homepage before they have even executed a query. The `base.html` file contains HTML code for visual aspects like font color and so forth.
