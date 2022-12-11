@@ -49,11 +49,11 @@ The first thing you need to do is to download a copy of this project and install
 git clone https://github.com/TrevBot17/Capstone.git
 pip install -r requirements.txt
 ```
-The project includes the following folders: `Pre-Processing` and `app`. The fully functional webpage can be run by just using the `app.py` (or `app.ipynb`) in the `app` folder. However, if you want to run every from scratch, you'll need to follow the steps below. Note that you'll need to make note of the directory of the project and modify the variable called `working_dir` to the correct location in the Notebooks `inv_index.ipynb`and `text_summarizer.ipynb`. This ensures that writing of the pickle files to the `app` folder performs correctly.
+The project includes the following folders: `Pre-Processing` and `App`. The fully functional webpage can be run by just using the `app.py` (or `app.ipynb`) in the `App` folder. However, if you want to run every from scratch, you'll need to follow the steps below. Note that you'll need to make note of the directory of the project and modify the variable called `working_dir` to the correct location in the Notebooks `inv_index.ipynb`and `text_summarizer.ipynb`. This ensures that writing of the pickle files to the `App` folder performs correctly.
 ## Pre-processing
 
 
-1. Run the `focused_crawler.ipynb` Notebook to generate the corpus. Within this file, you can play around with the parameters like `keyword` and `depth` to modify the content of the corpus. Make sure to write this file to the same directory with the other Python scripts. This script will creates the `Raw_TXT_Downloads` folder that will need to be referenced in future scripts.
+1. Run the `focused_crawler.ipynb` notebook to generate the corpus. Within this file, you can play around with the parameters like `keyword` and `depth` to modify the content of the corpus. This notebook will create the `Raw_TXT_Downloads` folder that will need to be referenced in future notebooks.
 2. Run  `duplicate_removal.ipynb` file to remove articles that are either identical or different URLs that redirect to the same or nearly identical articles. 
 3. Run the `inv_index.ipynb` Notebook to build the inverted index from your previously generated corpus. Again, make sure that the `working_dir` variable is set to `{your working directory}/Pre-Processing/inv_index.pickle`. This file should output the inverted index of the corpus as a pickle file to your working directory. You should also run `text_summaries.ipynb`  to create another pickle file in your working directory containing the text summaries associated with each URL in the corpus. 
 
