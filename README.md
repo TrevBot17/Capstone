@@ -51,7 +51,7 @@ git clone https://github.com/TrevBot17/Capstone.git
 ```
 pip install -r requirements.txt
 ```
-The project includes the following folders: `Pre-Processing` and `App`. The fully functional webpage can be run by just using the `app.py` (or `app.ipynb`) in the `App` folder. However, if you want to run every from scratch, you'll need to follow the steps below. Note that you'll need to make note of the directory of the project and modify the variable called `working_dir` to the correct location in the notebooks `inv_index.ipynb`and `text_summarizer.ipynb`. This ensures that writing of the pickle files to the `App` folder performs correctly.
+The project includes the following folders with corresponding Jupyter Notebooks and python scripts: `src/Pre-Processing` and `src/App`. The fully functional webpage can be run by just using the `app.py` (or `app.ipynb`) in the `App` folder. However, if you want to run every from scratch, you'll need to follow the steps below. Note that you'll need to make note of the directory of the project and modify the variable called `working_dir` to the correct location in the notebooks `inv_index.ipynb`and `text_summarizer.ipynb`. This ensures that writing of the pickle files to the `App` folder performs correctly.
 ## Pre-processing
 
 
