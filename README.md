@@ -51,7 +51,7 @@ git clone https://github.com/TrevBot17/Capstone.git
 ```
 pip install -r requirements.txt
 ```
-The project includes the following folders with corresponding Jupyter Notebooks and python scripts: `src/Pre-Processing` and `src/App`. The fully functional webpage can be run by just using the `app.py` (or `app.ipynb`) in the `App` folder. However, if you want to run every from scratch, you'll need to follow the steps below. Note that you'll need to make note of the directory of the project and modify the variable called `working_dir` to the correct location in the notebooks `inv_index.ipynb`and `text_summarizer.ipynb`. This ensures that writing of the pickle files to the `App` folder performs correctly.
+The project includes the following folders with corresponding Jupyter Notebooks and Python scripts: `src/Pre-Processing` and `src/App`. The fully functional webpage can be run by just using the `app.py` (or `app.ipynb`) in the `App` folder. However, if you want to run every from scratch, you'll need to follow the steps below. Note that you'll need to make note of the directory of the project and modify the variable called `working_dir` to the correct location in the notebooks `inv_index.ipynb`and `text_summarizer.ipynb`. This ensures that writing of the pickle files to the `App` folder performs correctly.
 ## Pre-processing
 
 
@@ -67,4 +67,4 @@ Run `app.py` (or `app.ipynb`) to build the search engine webpage running on your
 
 ## Evaluation
 
-Add details about `evaluation` and prec-rec python functions
+In order to evaluate the performance of our search engine run the `Evaluation.ipynb` notebook located in the main `src`folder. This notebook will leverage the existing ground truth Excel sheet `Capstone Ground Truth.xlsx` located in the same folder. If you want to create your own ground truth, you can use the notebook `Ground Truth Preparation.ipynb´, which will create a Pandas DataFrame given a set of queries, which then can be downloaded and filled out by a user in the same way as it was done in the given Excel sheet `Capstone Ground Truth.xlsx`.
