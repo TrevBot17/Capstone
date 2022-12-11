@@ -57,8 +57,8 @@ The project includes the following folders with corresponding Jupyter Notebooks 
 
 1. Run the `focused_crawler.ipynb` notebook to generate the corpus. Within this file, you can play around with the parameters like `keyword` and `depth` to modify the content of the corpus. This notebook will create the `Raw_TXT_Downloads` folder that will need to be referenced in future notebooks.
 2. Run  `duplicate_removal.ipynb` file to remove articles that are either identical or different URLs that redirect to the same or nearly identical articles. 
-3. Run the `inv_index.ipynb` notebook to build the inverted index from your previously generated corpus. Make sure that the `working_dir` variable is set to current location of the project. This file should output the inverted index of the corpus as a pickle file to the `App` folder.
-4. Run the `text_summarizer.ipynb` notebook to create text summaries associated with each URL in the corpus. Again, make sure that the `working_dir` variable is set to correct location. This file should output the text summaries of the corpus as a pickle file to the `App` folder.
+3. Run the `inv_index.ipynb` notebook to build the inverted index from your previously generated corpus, which should output the inverted index of the corpus as a pickle file to the `App` folder.
+4. Run the `text_summarizer.ipynb` notebook to create text summaries associated with each URL in the corpus, which should output the text summaries of the corpus as a pickle file to the `App` folder.
 
 ## App
 
