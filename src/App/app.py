@@ -17,7 +17,6 @@ def index(page):
     
     queries = {'q': query_prep(user_search_query)}
     ranking = OkapiBM25(inv_ind, queries)['q']
-    seen = set()
 
     newRes= []
     myDict = pickle.load(open('text_summaries.pickle','rb'))
