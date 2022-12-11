@@ -39,10 +39,6 @@ The other key notebooks include:
 # HTML Base and Index Files
 The `index.html` and `base.html` files provide the back-end structure of the search engine webpage. The `index.html` file contains [Jinja2](https://jinja.palletsprojects.com/en/3.1.x/) scripting to incorporate logic into the web page's layout dependent on certain conditions. For example, if a user reaches the last page of a certain query's results, they should not be able to click on the next page button since there wouldn't be a next page. Another instance of Jinja2 logic is modifying what is shown on the home page compared to post-search. The user does not need to see an empty section labeled with "No Search Results" on the homepage before they have even executed a query. The `base.html` file contains HTML code for visual aspects like font color and so forth.
 
-# Integration with IDE and Heroku
-To make all these scripts work together, we first ran locally the `focused_crawler`, `inv_index`, and `text_summarizer` Jupyter Notebooks to generate pickle files of the inverted index and text summaries of all the documents in the corpus. Make sure to write the pickle to the `app` directory. These pickle files are available pre-generated in this repository at `inv_index.pickle` and `text_summaries.pickle` in `src/app/`. Next, those pickle files are accessed by the `app.py` file (or `app.ipynb` if you would like to run it in a Notebook) in Visual Studio Code or the directory in the same directory as the pickle files, which also contains the `search_engine.py` file along with the HTML files. `app.ipynb` and `search_engine.py` are available here as Jupyter Notebooks. Finally, a Heroku account was set up and the webpage was generated via the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) and deployed with Heroku Git. It is recommended that, to successfully run this project, an IDE comparable to VS Code is used following the above-described methodology. To just run the project locally without Heroku deployment, everything can be run in a Jupyter Notebook-style environment.
-
-
 # How To Run
 The first thing you need to do is to download a copy of this project and install the requirements:
 ```
@@ -52,8 +48,8 @@ git clone https://github.com/TrevBot17/Capstone.git
 pip install -r requirements.txt
 ```
 The project includes the following folders with corresponding Jupyter Notebooks and Python scripts: `src/Pre-Processing` and `src/App`. The fully functional webpage can be run by just using the `app.py` (or `app.ipynb`) in the `App` folder. However, if you want to run every from scratch, you'll need to follow the steps below.
-## Pre-Processing
 
+## Pre-Processing
 
 1. Run the `focused_crawler.ipynb` notebook to generate the corpus. Within this file, you can play around with the parameters like `keyword` and `depth` to modify the content of the corpus. This notebook will create the `Raw_TXT_Downloads` folder that will need to be referenced in future notebooks.
 2. Run  `duplicate_removal.ipynb` file to remove articles that are either identical or different URLs that redirect to the same or nearly identical articles. 
@@ -62,9 +58,10 @@ The project includes the following folders with corresponding Jupyter Notebooks 
 
 ## App
 
-
 Run `app.py` (or `app.ipynb`) to build the search engine webpage running on your local machine. This script interacts with the `search_engine.py` script, so make sure to have that script in the same directory.
 
-## Evaluation
+## Integration with Heroku
+The above describes the steps in order to run the search engine locally. In order to create a publicly available version we decided to host the web page on the Heroku cloud platform service. For that, a Heroku account was set up and the web page was generated via the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) and deployed with Heroku Git. The content of the `App` folder (except the app.ipynb file) need to be pushed to the Heroku platform, including the requirement.txt file. It is recommended that, to successfully run and publish this project, an IDE comparable to VS Code is used.
 
+# Evaluation
 In order to evaluate the performance of our search engine run the `Evaluation.ipynb` notebook located in the main `src` folder. This notebook will leverage the existing ground truth Excel sheet `Capstone Ground Truth.xlsx` located in the same folder. If you want to create your own ground truth, you can use the notebook `Ground Truth Preparation.ipynb`. It will create a Pandas DataFrame based on a set of queries, which then can be downloaded as an Excel sheet and filled out by a user in the same way as it was done in `Capstone Ground Truth.xlsx`.
