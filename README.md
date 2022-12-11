@@ -63,7 +63,7 @@ The project includes the following folders with corresponding Jupyter Notebooks 
 ## App
 
 
-Run `app.py` (or `app.ipynb`) to build the search engine webpage running on your local machine. This Notebook interacts with the `search_engine.py` script, so make sure to have that script in the same directory.
+Run `app.py` (or `app.ipynb`) to build the search engine webpage running on your local machine. This script interacts with the `search_engine.py` script, so make sure to have that script in the same directory.
 
 ## Evaluation
 
