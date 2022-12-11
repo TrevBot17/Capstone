@@ -50,18 +50,16 @@ pip install -r requirements.txt
 The project includes the following folders with corresponding Jupyter Notebooks and Python scripts: `src/Pre-Processing` and `src/App`. The fully functional webpage can be run by just using the `app.py` (or `app.ipynb`) in the `App` folder. However, if you want to run every from scratch, you'll need to follow the steps below.
 
 ## Pre-Processing
-
 1. Run the `focused_crawler.ipynb` notebook to generate the corpus. Within this file, you can play around with the parameters like `keyword` and `depth` to modify the content of the corpus. This notebook will create the `Raw_TXT_Downloads` folder that will need to be referenced in future notebooks.
 2. Run  `duplicate_removal.ipynb` file to remove articles that are either identical or different URLs that redirect to the same or nearly identical articles. 
 3. Run the `inv_index.ipynb` notebook to build the inverted index from your previously generated corpus, which should output the inverted index of the corpus as a pickle file to the `App` folder.
 4. Run the `text_summarizer.ipynb` notebook to create text summaries associated with each URL in the corpus, which should output the text summaries of the corpus as a pickle file to the `App` folder.
 
 ## App
-
 Run `app.py` (or `app.ipynb`) to build the search engine webpage running on your local machine. This script interacts with the `search_engine.py` script, so make sure to have that script in the same directory.
 
 ## Integration with Heroku
-The above describes the steps in order to run the search engine locally. In order to create a publicly available version we decided to host the web page on the Heroku cloud platform service. For that, a Heroku account was set up and the web page was generated via the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) and deployed with Heroku Git. The content of the `App` folder (except the app.ipynb file) need to be pushed to the Heroku platform, including the requirement.txt file. It is recommended that, to successfully run and publish this project, an IDE comparable to VS Code is used.
+The above describes the steps to run the search engine locally. In order to create a publicly available version we decided to host the web page on the Heroku cloud platform service. For that, a Heroku account was set up and the web page was generated via the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) and deployed with Heroku Git. The content of the `App` folder (except the app.ipynb file) need to be pushed to the Heroku platform, including the requirement.txt file. It is recommended that, to successfully run and publish this project, an IDE comparable to VS Code is used.
 
 # Evaluation
 In order to evaluate the performance of our search engine run the `Evaluation.ipynb` notebook located in the main `src` folder. This notebook will leverage the existing ground truth Excel sheet `Capstone Ground Truth.xlsx` located in the same folder. If you want to create your own ground truth, you can use the notebook `Ground Truth Preparation.ipynb`. It will create a Pandas DataFrame based on a set of queries, which then can be downloaded as an Excel sheet and filled out by a user in the same way as it was done in `Capstone Ground Truth.xlsx`.
